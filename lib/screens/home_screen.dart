@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:ticketapp/base/res/media.dart';
 import 'package:ticketapp/base/res/styles/app_styles.dart';
 import 'package:ticketapp/base/widgets/app_double_text.dart';
+import 'package:ticketapp/base/widgets/ticket_view.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -79,6 +80,10 @@ class HomeScreen extends StatelessWidget {
                   smallText: 'view all',
                   bigText: 'Upcoming flights',
                 ),
+                const SizedBox(
+                  height: 40.0,
+                ),
+                TicketView(),
               ],
             ),
           ),
