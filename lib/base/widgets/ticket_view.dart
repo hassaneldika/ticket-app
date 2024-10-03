@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:ticketapp/base/res/styles/app_styles.dart';
+import 'package:ticketapp/base/widgets/app_columns_text_layout.dart';
 import 'package:ticketapp/base/widgets/app_layoutbuilder_widget.dart';
 import 'package:ticketapp/base/widgets/big_circle.dart';
 import 'package:ticketapp/base/widgets/big_dot.dart';
+import 'package:ticketapp/base/widgets/text_style_fourth.dart';
+import 'package:ticketapp/base/widgets/text_style_third.dart';
 
 class TicketView extends StatelessWidget {
   const TicketView({super.key});
@@ -31,11 +34,7 @@ class TicketView extends StatelessWidget {
                     //you can use Expanded widget or mainAxisAlignment widget
                     //mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(
-                        'NYC',
-                        style: AppStyles.headLineStyle3
-                            .copyWith(color: Colors.white),
-                      ),
+                      const TextStyleThird(text: 'NYC'),
                       Expanded(child: Container()),
                       const BigDot(),
                       Expanded(
@@ -60,11 +59,7 @@ class TicketView extends StatelessWidget {
                       )),
                       const BigDot(),
                       Expanded(child: Container()),
-                      Text(
-                        'LND',
-                        style: AppStyles.headLineStyle3
-                            .copyWith(color: Colors.white),
-                      ),
+                      const TextStyleThird(text: 'LDN'),
                     ],
                   ),
                   const SizedBox(
@@ -72,28 +67,18 @@ class TicketView extends StatelessWidget {
                   ),
                   Row(
                     children: [
-                      SizedBox(
+                      const SizedBox(
                         width: 100.0,
-                        child: Text(
-                          'New-York',
-                          style: AppStyles.headLineStyle4
-                              .copyWith(color: Colors.white),
-                        ),
+                        child: TextStyleFourth(text: 'New-York'),
                       ),
                       Expanded(child: Container()),
-                      Text(
-                        '8H 30M',
-                        style: AppStyles.headLineStyle4
-                            .copyWith(color: Colors.white),
-                      ),
+                      const TextStyleFourth(text: '8H 30M'),
                       Expanded(child: Container()),
-                      SizedBox(
+                      const SizedBox(
                         width: 100.0,
-                        child: Text(
-                          'London',
-                          textAlign: TextAlign.end,
-                          style: AppStyles.headLineStyle4
-                              .copyWith(color: Colors.white),
+                        child: TextStyleFourth(
+                          text: 'London',
+                          align: TextAlign.end,
                         ),
                       ),
                     ],
@@ -129,52 +114,26 @@ class TicketView extends StatelessWidget {
                   borderRadius: BorderRadius.only(
                       bottomLeft: Radius.circular(21.0),
                       bottomRight: Radius.circular(21.0))),
-              child: Column(
+              child: const Column(
                 children: [
                   Row(
                     //you can use Expanded widget or mainAxisAlignment widget
-                    //mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(
-                        '1 MAY',
-                        style: AppStyles.headLineStyle3
-                            .copyWith(color: Colors.white),
+                      AppColumnTextLayout(
+                        topText: '1 MAY',
+                        bottomText: 'Date',
+                        alignment: CrossAxisAlignment.start,
                       ),
-                      Expanded(child: Container()),
-                      Text(
-                        '08:00 AM',
-                        style: AppStyles.headLineStyle3
-                            .copyWith(color: Colors.white),
+                      AppColumnTextLayout(
+                        topText: '08:00 AM',
+                        bottomText: 'Departure time',
+                        alignment: CrossAxisAlignment.center,
                       ),
-                      Expanded(child: Container()),
-                      Text(
-                        '23',
-                        style: AppStyles.headLineStyle3
-                            .copyWith(color: Colors.white),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(
-                    height: 3.0,
-                  ),
-                  Row(
-                    children: [
-                      Text(
-                        'Date',
-                        style: AppStyles.headLineStyle3
-                            .copyWith(color: Colors.white),
-                      ),
-                      Expanded(child: Container()),
-                      Text(
-                        'Departure time',
-                        style: AppStyles.headLineStyle3
-                            .copyWith(color: Colors.white),
-                      ),
-                      Expanded(child: Container()),
-                      Text(
-                        'Number',
-                        style: AppStyles.headLineStyle3
-                            .copyWith(color: Colors.white),
+                      AppColumnTextLayout(
+                        topText: 'Date',
+                        bottomText: 'Number',
+                        alignment: CrossAxisAlignment.end,
                       ),
                     ],
                   ),
