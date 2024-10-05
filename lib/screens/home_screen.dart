@@ -77,9 +77,10 @@ class HomeScreen extends StatelessWidget {
                 const SizedBox(
                   height: 40.0,
                 ),
-                const AppDoubleText(
+                AppDoubleText(
                   smallText: 'view all',
                   bigText: 'Upcoming flights',
+                  func: () => Navigator.pushNamed(context, '/all_tickets'),
                 ),
                 const SizedBox(
                   height: 20.0,
@@ -91,6 +92,14 @@ class HomeScreen extends StatelessWidget {
                             .take(2)
                             .map((e) => TicketView(ticket: e))
                             .toList())),
+                const SizedBox(
+                  height: 40.0,
+                ),
+                AppDoubleText(
+                  smallText: 'view all',
+                  bigText: 'Hotels',
+                  func: () => Navigator.pushNamed(context, '/all_tickets'),
+                ),
               ],
             ),
           ),
