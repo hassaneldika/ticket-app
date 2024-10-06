@@ -13,6 +13,7 @@ class AppStyles {
   static const Color kakiColor = Color(0xFFd2bdb6);
   static const Color ticketTabColor = Color(0xfff4f6fd);
   static const Color planeColor = Color(0xffbfc2df);
+  static const Color findTicketColor = Color(0xd91130ce);
 
   static const TextStyle textStyle =
       TextStyle(fontSize: 16.0, fontWeight: FontWeight.w500);

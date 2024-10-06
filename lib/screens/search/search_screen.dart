@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ticketapp/base/res/styles/app_styles.dart';
 import 'package:ticketapp/screens/search/widgets/app_text_icon.dart';
 import 'package:ticketapp/screens/search/widgets/app_ticket_tabs.dart';
+import 'package:ticketapp/screens/search/widgets/find_ticket.dart';
 
 class SearchScreen extends StatelessWidget {
   const SearchScreen({super.key});
@@ -38,6 +39,10 @@ class SearchScreen extends StatelessWidget {
             icon: Icons.flight_land_rounded,
             text: 'Arival',
           ),
+          const SizedBox(
+            height: 25.0,
+          ),
+          const FindTicket(),
         ],
       ),
     );
